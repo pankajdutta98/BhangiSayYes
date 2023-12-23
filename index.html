@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Invitation</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+max-height: 100vh;
+background-color: #fffafb;
+    }
+
+    #container {
+      text-align: center;
+	display:grid;
+	place-items:center;
+    }
+#invitationText{
+      color: #e80d34;
+  font-size: larger;
+  font-family: 'Arial', sans-serif;
+    }
+
+    button {
+      font-size: 18px;
+      margin: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    #noButton {
+      position: relative;
+    }
+
+    #cuteGif {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <p id="invitationText">Ashlil chize karega bhanguu?</p>
+    <button id="yesButton" onclick="changeTextAndGif()">Haa chal!</button>
+    <button id="noButton" onclick="moveNoButton()">Jaa jaake bartan dho!</button>
+    <img id="cuteGif" src="https://media.tenor.com/viGhmPE0neMAAAAi/piyo-tkthao219.gif" alt="Cute Gif">
+  </div>
+
+  <script>
+    function changeTextAndGif() {
+      document.getElementById('invitationText').innerText = "Chaloooooo!!!";
+      document.getElementById('cuteGif').src = "https://media1.tenor.com/m/IaPq009DU6IAAAAC/pig-cute.gif"; // Replace with your desired gif URL
+    }
+
+    function moveNoButton() {
+      const noButton = document.getElementById('noButton');
+      const newPosition = Math.floor(Math.random() * 90) + 1; // Random position between 1% and 90%
+      noButton.style.left = `${newPosition}%`;
+    }
+  </script>
+</body>
+</html>
